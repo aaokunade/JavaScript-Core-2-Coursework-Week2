@@ -4,7 +4,7 @@ function shoppingList(arrayOfItems) {
   let newUnOderdList = document.createElement("ul");
   content.appendChild(newUnOderdList);
   arrayOfItems.forEach(function (str) {
-    let newList = document.createElement("li");
+  let newList = document.createElement("li");
     newList.innerText = str;
     newUnOderdList.appendChild(newList);
   });
