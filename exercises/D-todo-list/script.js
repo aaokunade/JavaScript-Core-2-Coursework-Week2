@@ -6,7 +6,7 @@ function todoList(todos) {
   todos.forEach(function (obj) {
     let newList = document.createElement("li");
     newList.innerText = obj["todo"];
-    newUnOderdList.append(newList);
+    newUnOderdList.appendChild(newList);
     newList.addEventListener("click", lineThruFunc);
     function lineThruFunc() {
       if(newList.style.textDecoration === "line-through"){

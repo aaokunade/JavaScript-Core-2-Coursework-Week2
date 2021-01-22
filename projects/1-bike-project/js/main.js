@@ -55,11 +55,22 @@ function submitBtnClicked(e) {
   e.preventDefault();
   let submitFlag = true;
   if (yourNameField.value.length === 0) {
-    yourNameField.backgroundColor = "red";
+    yourNameField.style.backgroundColor = "red";
+    submitFlag = false;
+  }
+  if (emailField.value.length === 0 || !emailField.value.includes("@")) {
+    emailField.style.backgroundColor = "red";
+    submitFlag = false;
+  }
+  if (describeYourselfField.value.length === 0) {
+    describeYourselfField.style.backgroundColor = "red";
     submitFlag = false;
   }
 
-  // yourNameField.value,
-  // emailField.value,
-  // describeYourselfField.value
+  if (submitFlag) {
+    yourNameField.value = "";
+    emailField.value = "";
+    describeYourselfField.value = "";
+    alert("Thank you for filling out the form");
+  }
 }

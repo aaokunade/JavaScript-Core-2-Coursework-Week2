@@ -4,11 +4,11 @@ function listOfColours(colours) {
   let newSelect = document.createElement("select");
   content.appendChild(newSelect);
   let newPara = document.createElement("p");
-  newPara.innerText = "Selected color: ";
+  newPara.innerText = "You have Selected: ";
   content.appendChild(newPara);
   newSelect.onchange = function () {
     // alert(newSelect.value);
-    newPara.innerText = newSelect.value;
+    newPara.innerText = `You have Selected ${newSelect.value}`;
     newPara.style.backgroundColor = newSelect.value;
   };
   colours.forEach(function (str) {
